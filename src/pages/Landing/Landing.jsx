@@ -59,6 +59,8 @@ function Landing() {
             width="100%"
             height="100%"
             autoPlay
+            muted
+            controls
             title="Nifty video"
             src={video}
           />
