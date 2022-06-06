@@ -22,15 +22,11 @@
     align-items: center;
     gap: 2em;
   }
-  .homeLikedSongsContainer {
-    min-width: 400px;
-    width: 100%;
-  }
+  .homeLikedSongsContainer,
   .homeTrendingTracksContainer {
     min-width: 400px;
     width: 100%;
   }
-
   .homeTrendingArtistsContainer {
     overflow: hidden;
     min-width: 400px;
@@ -71,6 +67,7 @@
   .homeTrendingTracksContainer,
   .homeTrendingArtistsContainer,
   .homeLikedSongsContainer {
+    min-width: 300px !important;
     width: 100% !important;
   }
 }

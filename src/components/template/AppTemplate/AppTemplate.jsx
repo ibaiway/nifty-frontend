@@ -3,10 +3,11 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import Player from '../../organism/Player/Player';
 import Aside from '../../organism/Aside/Aside';
+import Hamburger from '../../atoms/Hamburger/Hamburger';
+import AppHeader from '../../organism/AppHeader/AppHeader';
 // styles
 import 'react-toastify/dist/ReactToastify.css';
 import './AppTemplate.scss';
-import Hamburger from '../../atoms/Hamburger/Hamburger';
 
 function AppTemplate({ children }) {
   return (
@@ -27,6 +28,7 @@ function AppTemplate({ children }) {
         draggable
         pauseOnHover
       />
+      <AppHeader />
       <Hamburger />
     </div>
   );

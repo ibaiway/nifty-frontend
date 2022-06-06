@@ -12,8 +12,6 @@ import CardSkeleton from '../../components/molecules/Skeletons/CardSkeleton';
 
 import TrendingList from '../../components/organism/TrendingList/TrendingList';
 
-import Button from '../../components/molecules/Button/Button';
-
 // utils
 import useFetchItems from '../../hooks/useFetchItems';
 import follow from '../../utils/api/followArtist';
@@ -64,9 +62,13 @@ function Artist() {
             <img src={IconFollow} alt="iconfollow" />
             <p>Followers {artist.followers}</p>
           </div>
-          <Button className="ButtonFollow" handleClick={handleFollowUser}>
+          <button
+            type="button"
+            className="playlistFollowBtn"
+            onClick={handleFollowUser}
+          >
             {artist.isFollowed ? 'Unfollow' : 'Follow'}
-          </Button>
+          </button>
         </div>
       </header>
       <section className="trendingTracksContainer">

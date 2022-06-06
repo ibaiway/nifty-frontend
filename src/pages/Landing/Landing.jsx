@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { APP, LANDING, SIGN_UP } from '../../routes';
+import { ACCOUNT, APP, SIGN_UP } from '../../routes';
 
 import LOGO from '../../assets/svg/LogoViolet.svg';
 import Button from '../../components/molecules/Button/Button';
@@ -21,8 +21,8 @@ function Landing() {
     <div className="landingContainer">
       <header className="headerWrapper">
         <div className="logoWrapper">
-          <Link to={LANDING}>
-            <img src={LOGO} alt="girl-music" />
+          <Link to={APP}>
+            <img src={LOGO} alt="logo" />
           </Link>
         </div>
         <nav className="navWrapper">
@@ -43,7 +43,9 @@ function Landing() {
             ) : (
               <li className="AvatarLogin">
                 <div className="landingAvatarWrapper">
-                  <Avatar size={50} />
+                  <Link to={`${APP}${ACCOUNT}`}>
+                    <Avatar size={50} />
+                  </Link>
                 </div>
               </li>
             )}
@@ -70,7 +72,7 @@ function Landing() {
             <h1 className="headingTitle">Never Stop Listening</h1>
             <p className="landingText">
               Discover, stream and share a constantly expanding mix of music
-              from emerging and major artists around the world
+              from emerging and major artists around the world.
             </p>
             <div className="buttonWrapper">
               <Button>

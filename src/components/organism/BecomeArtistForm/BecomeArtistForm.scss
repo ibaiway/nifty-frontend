@@ -12,13 +12,41 @@
     $gap: 1.5em,
     $wrap: nowrap
   );
-}
-.artisticNameForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  width: 100%;
+  .becomeArtistImageWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+    .becomeArtistText {
+      gap: 1em;
+      p {
+        font-size: 18px;
+        max-width: 400px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    img {
+      max-width: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .artisticNameForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+  }
+  .actionButtonsWrapper {
+    display: flex;
+    max-width: 300px;
+    gap: 2em;
+    align-items: center;
+  }
 }
 .heading1 {
   p {

@@ -16,7 +16,7 @@ function Artists() {
         {!isLoadingArtists ? (
           <ArtistList artists={artists} />
         ) : (
-          <div>
+          <div className="myPlaylistWrapper">
             <CardSkeleton />
           </div>
         )}

@@ -4,9 +4,10 @@
   display: none;
   position: absolute;
   z-index: 25;
-  right: 0;
+  right: 4px;
+  top: 4px;
   img {
-    width: 50px;
+    width: 40px;
   }
 }
 .hamburgerLogoWrapper {
@@ -19,7 +20,7 @@
 }
 .hamburgerWrapper {
   display: none;
-  border-radius: $border 0;
+
   padding: 1em 2em;
   background-color: $bg-dark-aside;
   width: 100%;

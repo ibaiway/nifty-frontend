@@ -19,6 +19,8 @@ import Modal from '../../template/Modal/Modal';
 import AccountEditInput from '../../molecules/AccountEditInput/AccountEditInput';
 import { createPlaylistSchema } from '../../../utils/schemas';
 import { closeModal, openModal } from '../../../redux/Dialog/dialogSlice';
+// images
+import becomeArtistImage from '../../../assets/img/musicBand.avif';
 
 function BecomeArtistForm() {
   const dispatch = useDispatch();
@@ -42,40 +44,48 @@ function BecomeArtistForm() {
   return (
     <section className="ArtistSection">
       <h1 className="heading1">Become An Artist</h1>
-      <p>
-        Being an artist means that you will be able to upload your own songs.
-      </p>
-      <p>Become an artist in just one click</p>
-      <div className="flexWrapper">
-        <Link to={`${APP}${ACCOUNT}`} className="backButton">
-          Back
-        </Link>
-        <Button
-          type="submit"
-          handleClick={user.artist ? handleSubmit : () => dispatch(openModal())}
-        >
-          {!user.artist ? 'Be Artist' : 'Cancel Suscription'}
-        </Button>
-        <Modal title="Becoming an artist!">
-          <Formik
-            initialValues={{ name: '' }}
-            onSubmit={handleSubmit}
-            validationSchema={createPlaylistSchema}
-          >
-            {({ errors, touched }) => (
-              <Form className="artisticNameForm">
-                <AccountEditInput
-                  error={errors.name}
-                  touched={touched.name}
-                  name="name"
-                  label="Artistic name"
-                />
-                <Button type="submit">Submit name!</Button>
-              </Form>
-            )}
-          </Formik>
-        </Modal>
+      <div className="becomeArtistImageWrapper">
+        <img src={becomeArtistImage} alt="music band" />
+        <div className="becomeArtistText">
+          <p>
+            Being an artist means that you will be able to upload your own
+            songs. Become an artist in just one click.
+          </p>
+          <div className=" actionButtonsWrapper">
+            <Link to={`${APP}${ACCOUNT}`} className="backButton">
+              Back
+            </Link>
+            <Button
+              type="submit"
+              handleClick={
+                user.artist ? handleSubmit : () => dispatch(openModal())
+              }
+            >
+              {!user.artist ? 'Become an Artist' : 'Cancel Suscription'}
+            </Button>
+          </div>
+        </div>
       </div>
+
+      <Modal title="Becoming an artist!">
+        <Formik
+          initialValues={{ name: '' }}
+          onSubmit={handleSubmit}
+          validationSchema={createPlaylistSchema}
+        >
+          {({ errors, touched }) => (
+            <Form className="artisticNameForm">
+              <AccountEditInput
+                error={errors.name}
+                touched={touched.name}
+                name="name"
+                label="Artistic name"
+              />
+              <Button type="submit">Submit name!</Button>
+            </Form>
+          )}
+        </Formik>
+      </Modal>
     </section>
   );
 }

@@ -20,7 +20,9 @@ function MyPlaylists() {
       </div>
 
       {isLoading && isLoadingFollowedPlaylists ? (
-        <CardSkeleton />
+        <div className="myPlaylistWrapper">
+          <CardSkeleton />
+        </div>
       ) : (
         <>
           <section className="myPlaylistWrapper">

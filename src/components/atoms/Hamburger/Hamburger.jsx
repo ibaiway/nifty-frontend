@@ -1,6 +1,5 @@
 import React from 'react';
-// router dom
-import { Link } from 'react-router-dom';
+
 // styles
 import './Hamburger.scss';
 // i18n
@@ -18,7 +17,6 @@ import * as route from '../../../routes';
 import logout from '../../../assets/svg/asideSvg/logout.svg';
 import hamburgerIcon from '../../../assets/svg/hamburger.svg';
 import crossIcon from '../../../assets/svg/cross.svg';
-import niftyLogo from '../../../assets/svg/LogoViolet.svg';
 
 function Hamburger() {
   const dispatch = useDispatch();
@@ -41,9 +39,6 @@ function Hamburger() {
       </button>
       {isHamburgerActive ? (
         <div className="hamburgerWrapper">
-          <Link to={route.APP} className="hamburgerLogoWrapper">
-            <img className="hamburgerImgLogo" src={niftyLogo} alt="logo" />
-          </Link>
           <div className="navlistsWrapper">
             <NavList title="Menu">
               <ListItemIcon route={route.APP} icon="home">
