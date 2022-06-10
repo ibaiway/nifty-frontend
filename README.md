@@ -3,7 +3,7 @@
   <h1 align="center" >NIFTY Project</h1>
 </p>
 
-> Live version [link](https://.netlify.app/)
+> Live version [link](https://niftymusic.netlify.app/)
 
 The goal of the project is to create a music web app similar to SoundCloud / Spotify. The users can listen to and upload music, as well as follow other users and create custom playlists.
 Front End: React.js, Redux Toolkit, Sass
